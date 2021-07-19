@@ -48,7 +48,9 @@ class DjangoPersistence(BasePersistence[UD, CD, BD]):
                 bot_data.pop(key)
 
     def get_chat_data(self) -> DefaultDict[int, CD]:
-        return defaultdict(dict, {data.chat_id: data.data for data in ChatData.objects.filter(namespace=self._namespace)})
+        return defaultdict(
+            dict, {data.chat_id: data.data for data in ChatData.objects.filter(namespace=self._namespace)}
+        )
 
     def update_chat_data(self, chat_id: int, data: CD) -> None:
         ChatData.objects.update_or_create(namespace=self._namespace, chat_id=chat_id, defaults={"data": data})
@@ -64,7 +66,9 @@ class DjangoPersistence(BasePersistence[UD, CD, BD]):
             pass
 
     def get_user_data(self) -> DefaultDict[int, UD]:
-        return defaultdict(dict, {data.user_id: data.data for data in UserData.objects.filter(namespace=self._namespace)})
+        return defaultdict(
+            dict, {data.user_id: data.data for data in UserData.objects.filter(namespace=self._namespace)}
+        )
 
     def update_user_data(self, user_id: int, data: UD) -> None:
         UserData.objects.update_or_create(namespace=self._namespace, user_id=user_id, defaults={"data": data})
