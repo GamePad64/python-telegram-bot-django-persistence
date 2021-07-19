@@ -59,4 +59,4 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       env:
         POETRY_PYPI_TOKEN_PYPI: ${{ secrets.POETRY_PYPI_TOKEN_PYPI }}
-      run: poetry publish -v
+      run: poetry publish -nv
