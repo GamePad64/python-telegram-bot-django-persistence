@@ -37,7 +37,7 @@ class CallbackData(BaseData):
 class ConversationData(BaseData):
     name = models.CharField(max_length=255, blank=True, null=False)
     key = models.TextField()  # stringified JSON here!
-    state = models.JSONField()
+    state = models.JSONField(null=True, blank=True)
 
     class Meta:
         constraints = [models.UniqueConstraint(fields=["namespace", "name", "key"], name="unique_conversation_data")]
