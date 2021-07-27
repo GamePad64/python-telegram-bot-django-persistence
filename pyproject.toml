@@ -18,7 +18,7 @@ profile = "black"
 
 [tool.poetry]
 name = "python-telegram-bot-django-persistence"
-version = "0.1.4"
+version = "0.1.5"
 description = "Package to use Django ORM as persistence engine in Python Telegram Bot"
 authors = ["Alexander Shishenko <alex@shishenko.com>"]
 license = "MIT"

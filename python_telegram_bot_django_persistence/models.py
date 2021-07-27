@@ -22,7 +22,7 @@ class ChatData(BaseData):
 
 
 class UserData(BaseData):
-    user_id = models.BigIntegerField(unique=True, null=False, blank=False)
+    user_id = models.BigIntegerField(null=False, blank=False)
     data = models.JSONField()
 
     class Meta:
