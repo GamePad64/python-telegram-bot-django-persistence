@@ -1,12 +1,6 @@
 from django.contrib import admin
 
-from .models import (
-    BotData,
-    CallbackData,
-    ChatData,
-    ConversationData,
-    UserData,
-)
+from .models import BotData, CallbackData, ChatData, ConversationData, UserData
 
 
 @admin.register(BotData)

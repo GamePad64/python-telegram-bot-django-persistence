@@ -5,13 +5,7 @@ from typing import DefaultDict, Optional, Tuple, cast
 from telegram.ext import BasePersistence
 from telegram.ext.utils.types import BD, CD, UD, CDCData, ConversationDict
 
-from .models import (
-    BotData,
-    CallbackData,
-    ChatData,
-    ConversationData,
-    UserData,
-)
+from .models import BotData, CallbackData, ChatData, ConversationData, UserData
 
 
 class DjangoPersistence(BasePersistence[UD, CD, BD]):
