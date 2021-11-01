@@ -11,14 +11,14 @@ on:
     branches: [ main ]
 
 env:
-  USING_POETRY_VERSION: ">=1.1.7"
+  USING_POETRY_VERSION: ">=1.1.11"
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9"]
+        python-version: ["3.9", "3.10"]
 
     steps:
     - uses: actions/checkout@v2
