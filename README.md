@@ -1,8 +1,6 @@
 # python-telegram-bot-django-persistence
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/python-telegram-bot-django-persistence?style=flat-square)](https://pypi.org/project/python-telegram-bot-django-persistence/)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/python-telegram-bot-django-persistence?style=for-the-badge)]()
 
 Do you use [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot) with Django
 and want persistence without additional infrastructure? We've got you covered!
