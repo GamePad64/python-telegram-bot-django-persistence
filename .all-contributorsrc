@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "gamepad64",
+      "name": "Alexander Shishenko",
+      "avatar_url": "https://avatars.githubusercontent.com/u/837953?v=4",
+      "profile": "https://shishenko.com",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "python-telegram-bot-django-persistence",
+  "projectOwner": "GamePad64",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
