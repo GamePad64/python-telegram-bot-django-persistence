@@ -158,7 +158,7 @@ test = ["appdirs (==1.4.4)", "pytest (>=6)", "pytest-cov (>=2.7)", "pytest-mock 
 
 [[package]]
 name = "python-telegram-bot"
-version = "13.8.1"
+version = "13.9"
 description = "We have made you a wrapper you can't refuse"
 category = "main"
 optional = false
@@ -322,8 +322,8 @@ platformdirs = [
     {file = "platformdirs-2.4.0.tar.gz", hash = "sha256:367a5e80b3d04d2428ffa76d33f124cf11e8fff2acdaa9b43d545f5c7d661ef2"},
 ]
 python-telegram-bot = [
-    {file = "python-telegram-bot-13.8.1.tar.gz", hash = "sha256:b06691e55c35943267ee636d9aa702b3579155d2f32e0e2d6d7f11f0b5e727f0"},
-    {file = "python_telegram_bot-13.8.1-py3-none-any.whl", hash = "sha256:44603dad5182f366c576d8c4a1a8f1e45d294621d712ff34ef1ae1b1b14de05d"},
+    {file = "python-telegram-bot-13.9.tar.gz", hash = "sha256:512d7a84f4bf4e59b7acaf87a38e29c60f65a2717ebf6455b4d66fd058326b1b"},
+    {file = "python_telegram_bot-13.9-py3-none-any.whl", hash = "sha256:a0018979585054f9c8da70198701053705ff1cd2839cc74b2da5371e3ada9ada"},
 ]
 pytz = [
     {file = "pytz-2021.3-py2.py3-none-any.whl", hash = "sha256:3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c"},
