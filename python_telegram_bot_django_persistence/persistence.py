@@ -79,14 +79,14 @@ class DjangoPersistence(BasePersistence[UD, CD, BD]):
 
     def get_callback_data(self) -> Optional[CDCData]:
         try:
-            cdcdata_json = CallbackData.objects.get(namespace=self._namespace)
+            cdcdata_json = CallbackData.objects.get(namespace=self._namespace).data
             # Before asking me wtf is this, just check DictPersistence
             return cast(CDCData, ([(one, float(two), three) for one, two, three in cdcdata_json[0]], cdcdata_json[1]))
         except CallbackData.DoesNotExist:
             return None
 
     def update_callback_data(self, data: CDCData) -> None:
-        CallbackData.objects.update_or_create(namespace=self._namespace, defaults=data)
+        CallbackData.objects.update_or_create(namespace=self._namespace, defaults={"data": data})
 
     def get_conversations(self, name: str) -> ConversationDict:
         return {
