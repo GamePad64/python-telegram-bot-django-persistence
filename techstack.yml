@@ -1,0 +1,138 @@
+repo_name: GamePad64/python-telegram-bot-django-persistence
+report_id: '0940042d52262ddfbdb2a6dc0ee10ee4'
+repo_type: Public
+timestamp: '2023-11-09T15:45:39+00:00'
+requested_by: GamePad64
+provider: github
+branch: main
+detected_tools_count: 8
+tools:
+- name: Python
+  description: A clear and powerful object-oriented programming language, comparable
+    to Perl, Ruby, Scheme, or Java.
+  website_url: https://www.python.org
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source: ".github/workflows/pythonpackage.yml"
+  last_updated_by: Alexander Shishenko
+  last_updated_on: 2021-07-19 23:41:25.000000000 Z
+- name: PyPI
+  description: A repository of software for the Python programming language
+  website_url: https://pypi.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Hosted Package Repository
+  image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source: pyproject.toml
+  last_updated_by: Alexander Shishenko
+  last_updated_on: 2021-07-19 23:41:25.000000000 Z
+- name: Django
+  description: A high-level Python Web framework that encourages rapid development
+    and clean
+  package_url: https://pypi.org/Django
+  version: '3.1'
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19832/default_58dbe7b4d7ec447b62773209af0f9a31bbabf5bd.png
+  detection_source_url: pyproject.toml
+  detection_source: pyproject.toml
+  last_updated_by: Alexander Shishenko
+  last_updated_on: 2021-11-01 18:22:46.000000000 Z
+  vulnerabilities:
+  - name: SQL Injection in Django
+    cve_id: CVE-2021-35042
+    cve_url: https://github.com/advisories/GHSA-xpfp-f569-q3p2
+    detected_date: Sep 23
+    severity: critical
+    first_patched: 3.1.13
+  - name: Path Traversal in Django
+    cve_id: CVE-2021-31542
+    cve_url: https://github.com/advisories/GHSA-rxjp-mfm9-w4wr
+    detected_date: Aug 22
+    severity: high
+    first_patched: 3.1.9
+  - name: Potential bypass of an upstream access control based on URL paths in Django
+    cve_id: CVE-2021-44420
+    cve_url: https://github.com/advisories/GHSA-v6rh-hp5x-86rv
+    detected_date: Dec 14
+    severity: high
+    first_patched: 3.1.14
+  - name: Directory Traversal in Django
+    cve_id: CVE-2021-28658
+    cve_url: https://github.com/advisories/GHSA-xgxc-v2qg-chmh
+    detected_date: Aug 22
+    severity: moderate
+    first_patched: 3.1.8
+  - name: Header injection possible in Django
+    cve_id: CVE-2021-32052
+    cve_url: https://github.com/advisories/GHSA-qm57-vhq3-3fwf
+    detected_date: Aug 22
+    severity: moderate
+    first_patched: 3.1.10
+- name: black
+  description: The uncompromising code formatter
+  package_url: https://pypi.org/black
+  version: 22.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20099/default_029b9bbfb6be2cd34bebeda5b8e1e80a1d22441c.png
+  detection_source_url: poetry.lock
+  detection_source: pyproject.toml
+  last_updated_by: Alexander Shishenko
+  last_updated_on: 2021-07-19 23:41:25.000000000 Z
+- name: isort
+  description: A Python utility / library to sort Python imports
+  package_url: https://pypi.org/isort
+  version: 5.10.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20117/default_9cf91bfbbfb266fc12a914cdc09d9e4b55c773bb.png
+  detection_source_url: poetry.lock
+  detection_source: pyproject.toml
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2021-11-10 02:14:37.000000000 Z
+- name: python-telegram-bot
+  description: We have made you a wrapper you can't refuse
+  package_url: https://pypi.org/python-telegram-bot
+  version: '13.12'
+  license: GPL-3.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20123/default_c68325cce20e10071c4ad3e54c2ee159ac131c11.png
+  detection_source_url: poetry.lock
+  detection_source: pyproject.toml
+  last_updated_by: Alexander Shishenko
+  last_updated_on: 2021-07-27 10:36:28.000000000 Z
