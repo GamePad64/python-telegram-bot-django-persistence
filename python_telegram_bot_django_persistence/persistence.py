@@ -73,7 +73,7 @@ class DjangoPersistence(BasePersistence[UD, CD, BD]):
 
     async def get_callback_data(self) -> Optional[CDCData]:
         try:
-            cdcdata_json = await CallbackData.objects.aget(namespace=self._namespace)
+            cdcdata_json = (await CallbackData.objects.aget(namespace=self._namespace)).data
             # Before asking me wtf is this, just check DictPersistence
             return cast(CDCData, ([(one, float(two), three) for one, two, three in cdcdata_json[0]], cdcdata_json[1]))
         except CallbackData.DoesNotExist:
