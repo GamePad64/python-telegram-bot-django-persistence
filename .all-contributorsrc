@@ -14,6 +14,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "rhutkovich",
+      "name": "Raman Hutkovich",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9265526?v=4",
+      "profile": "https://github.com/rhutkovich",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -21,5 +30,7 @@
   "projectOwner": "GamePad64",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitType": "docs",
+  "commitConvention": "angular"
 }
