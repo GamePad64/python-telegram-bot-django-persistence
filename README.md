@@ -2,15 +2,21 @@
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/python-telegram-bot-django-persistence?style=flat-square)](https://pypi.org/project/python-telegram-bot-django-persistence/)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 
-Do you use [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot) with Django
-and want persistence without additional infrastructure? We've got you covered!
+Do you use [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot) or [aiogram](https://github.com/aiogram/aiogram) with Django
+and want storing FSM info without additional infrastructure?  
+We've got you covered!
+
+Originally, this package supported only PTB, but we added aiogram, because it is awesome!
 
 ## Quickstart
 
 ### 📥 Install package
 If you are using [poetry](https://python-poetry.org) (and if not, please, consider using it 😉):
 ```shell
-poetry add python-telegram-bot-django-persistence
+# For python-telegram-bot
+poetry add "python-telegram-bot-django-persistence[ptb]"
+# For aiogram
+poetry add "python-telegram-bot-django-persistence[aiogram]"
 ```
 
 Elif you are using `pip`, then just enter:
@@ -24,7 +30,8 @@ Then add `python_telegram_bot_django_persistence` into your `INSTALLED_APPS` in 
 ```python
 INSTALLED_APPS = [
     ...
-    "python_telegram_bot_django_persistence",
+    "python_telegram_bot_django_persistence",  # For python-telegram-bot
+    "aiogram_djpersistence",  # For aiogram
 ]
 ```
 
@@ -33,9 +40,15 @@ INSTALLED_APPS = [
 python manage migrate
 ```
 
-### 🌟 Awesome! Use DjangoPersistence in python-telegram-bot
+### 🌟 Awesome! Now use it in your bot!
+
+#### python-telegram-bot
 ```python
 updater = Updater(bot=bot, use_context=True, persistence=DjangoPersistence())
+```
+#### aiogram
+```python
+dp = Dispatcher(storage=DjangoStorage())
 ```
 
 ## Contributors ✨
