@@ -3,7 +3,7 @@ requires-python = ">=3.10"
 
 [tool.poetry]
 name = "python-telegram-bot-django-persistence"
-version = "0.1.7"
+version = "0.2.0"
 description = "Package to use Django ORM as persistence engine in Python Telegram Bot"
 authors = ["Alexander Shishenko <alex@shishenko.com>"]
 license = "MIT"
@@ -15,6 +15,10 @@ classifiers = [
 ]
 readme = "README.md"
 homepage = "https://github.com/GamePad64/python-telegram-bot-django-persistence"
+packages = [
+    { include = "python_telegram_bot_django_persistence" },
+    { include = "aiogram_djpersistence" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
