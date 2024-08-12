@@ -11,6 +11,9 @@ class BaseData(models.Model):
 class BotData(BaseData):
     data = models.JSONField()
 
+    def __str__(self):
+        return self.namespace or "<BotData>"
+
 
 class ChatData(BaseData):
     chat_id = models.BigIntegerField(null=False, blank=False)
@@ -19,6 +22,12 @@ class ChatData(BaseData):
     class Meta:
         constraints = [models.UniqueConstraint(fields=["namespace", "chat_id"], name="unique_chat_id")]
         indexes = [models.Index(fields=["namespace", "chat_id"])]
+
+    def __str__(self):
+        if self.namespace:
+            return f"{self.namespace}:{self.chat_id}"
+        else:
+            return str(self.chat_id)
 
 
 class UserData(BaseData):
@@ -29,9 +38,18 @@ class UserData(BaseData):
         constraints = [models.UniqueConstraint(fields=["namespace", "user_id"], name="unique_user_id")]
         indexes = [models.Index(fields=["namespace", "user_id"])]
 
+    def __str__(self):
+        if self.namespace:
+            return f"{self.namespace}:{self.user_id}"
+        else:
+            return str(self.user_id)
+
 
 class CallbackData(BaseData):
     data = models.JSONField()
+
+    def __str__(self):
+        return self.namespace or "<CallbackData>"
 
 
 class ConversationData(BaseData):
@@ -42,3 +60,9 @@ class ConversationData(BaseData):
     class Meta:
         constraints = [models.UniqueConstraint(fields=["namespace", "name", "key"], name="unique_conversation_data")]
         indexes = [models.Index(fields=["namespace", "name", "key"])]
+
+    def __str__(self):
+        if self.namespace:
+            return f"{self.namespace}:{self.name}:{self.key}"
+        else:
+            return f"{self.name}:{self.key}"

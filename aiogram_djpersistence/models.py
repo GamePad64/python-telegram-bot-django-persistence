@@ -32,7 +32,7 @@ class PersistentStorage(models.Model):
     business_connection_id = models.CharField(max_length=255, blank=True)
     destiny = models.TextField(max_length=255)
 
-    state = models.TextField(null=True, blank=True)
+    state = models.TextField(null=True, blank=True)  # noqa: DJ001
     data = models.JSONField(null=True, blank=True)
 
     objects = PersistentStorageManager()

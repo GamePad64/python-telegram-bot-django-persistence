@@ -42,6 +42,7 @@ line-length = 120
 
 [tool.ruff.lint]
 select = ["E", "F", "UP", "DJ", "PTH"]
+per-file-ignores = { "**/migrations/**.py" = ["E501"] }
 
 [tool.mypy]
 plugins = ["mypy_django_plugin.main", "pydantic.mypy"]
