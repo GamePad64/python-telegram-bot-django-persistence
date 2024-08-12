@@ -19,12 +19,19 @@ homepage = "https://github.com/GamePad64/python-telegram-bot-django-persistence"
 [tool.poetry.dependencies]
 python = "^3.10"
 Django = ">=5.0"
-python-telegram-bot = ">=20"
 django-stubs = "^5.0.4"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.5.7"
 mypy = "^1.11.1"
+pydantic = "^2.8.2"
+
+[tool.poetry.group.ptb.dependencies]
+python-telegram-bot = ">=20"
+
+[tool.poetry.group.aiogram.dependencies]
+aiogram = "^3.11.0"
+asgiref = "^3.8.1"
 
 [tool.ruff]
 line-length = 120
@@ -33,7 +40,7 @@ line-length = 120
 select = ["E", "F", "UP", "DJ", "PTH"]
 
 [tool.mypy]
-plugins = ["mypy_django_plugin.main"]
+plugins = ["mypy_django_plugin.main", "pydantic.mypy"]
 
 follow_imports = "silent"
 ignore_missing_imports = true
