@@ -46,9 +46,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://shishenko.com"><img src="https://avatars.githubusercontent.com/u/837953?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alexander Shishenko</b></sub></a><br /><a href="https://github.com/GamePad64/python-telegram-bot-django-persistence/commits?author=GamePad64" title="Code">💻</a> <a href="https://github.com/GamePad64/python-telegram-bot-django-persistence/commits?author=GamePad64" title="Documentation">📖</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://shishenko.com"><img src="https://avatars.githubusercontent.com/u/837953?v=4?s=100" width="100px;" alt="Alexander Shishenko"/><br /><sub><b>Alexander Shishenko</b></sub></a><br /><a href="https://github.com/GamePad64/python-telegram-bot-django-persistence/commits?author=GamePad64" title="Code">💻</a> <a href="https://github.com/GamePad64/python-telegram-bot-django-persistence/commits?author=GamePad64" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rhutkovich"><img src="https://avatars.githubusercontent.com/u/9265526?v=4?s=100" width="100px;" alt="Raman Hutkovich"/><br /><sub><b>Raman Hutkovich</b></sub></a><br /><a href="https://github.com/GamePad64/python-telegram-bot-django-persistence/commits?author=rhutkovich" title="Code">💻</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
