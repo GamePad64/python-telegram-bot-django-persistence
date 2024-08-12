@@ -11,19 +11,19 @@ on:
     branches: [ main ]
 
 env:
-  USING_POETRY_VERSION: ">=1.1.11"
+  USING_POETRY_VERSION: ">=1.8"
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9", "3.10"]
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
@@ -32,26 +32,26 @@ jobs:
         pip install poetry${USING_POETRY_VERSION}
         poetry install -v
     - run: poetry check
-    - run: poetry run black python_telegram_bot_django_persistence --check
+    - run: poetry run ruff check
 
   publish:
     runs-on: ubuntu-latest
     needs: [lint]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Set up latest stable Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
     - name: Install dependencies
       run: |
         python3 -m pip install --upgrade pip
         pip install poetry${USING_POETRY_VERSION}
-        poetry install --no-dev -v
+        poetry install --without=dev -v
     - name: Build package
       run: |
         poetry version $(git describe --tags)
         poetry build
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4
       with:
         name: dist
         path: dist

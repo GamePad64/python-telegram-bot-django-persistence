@@ -1,20 +1,5 @@
-[tool.black]
-line-length = 120
-target_version = ['py39']
-include = '\.pyi?$'
-skip-string-normalization = true
-exclude = '''
-/(
-    \.git
-  | \.mypy_cache
-  | \.pytest_cache
-  | \.venv
-  | \.vscode
-)
-'''
-
-[tool.isort]
-profile = "black"
+[project]
+requires-python = ">=3.10"
 
 [tool.poetry]
 name = "python-telegram-bot-django-persistence"
@@ -25,22 +10,39 @@ license = "MIT"
 classifiers = [
     'Intended Audience :: Developers',
     'Topic :: Internet',
-    'Framework :: Django :: 3.1',
-    'Framework :: Django :: 3.2',
-    'Framework :: Django :: 4.0',
+    'Framework :: Django :: 5.0',
+    'Framework :: Django :: 5.1',
 ]
 readme = "README.md"
 homepage = "https://github.com/GamePad64/python-telegram-bot-django-persistence"
 
 [tool.poetry.dependencies]
-python = "^3.9"
-Django = ">=3.1"
-python-telegram-bot = ">=13.7"
+python = "^3.10"
+Django = ">=5.0"
+python-telegram-bot = ">=20"
+django-stubs = "^5.0.4"
 
-[tool.poetry.dev-dependencies]
-black = ">=21.7b0"
-isort = "^5.10.1"
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.5.7"
+mypy = "^1.11.1"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "UP", "DJ", "PTH"]
+
+[tool.mypy]
+plugins = ["mypy_django_plugin.main"]
+
+follow_imports = "silent"
+ignore_missing_imports = true
+check_untyped_defs = true
+allow_redefinition = true
+
+[tool.django-stubs]
+django_settings_module = "project.settings"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
