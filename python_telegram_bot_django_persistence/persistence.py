@@ -1,7 +1,7 @@
 import json
 from typing import cast
 
-from models import BotData, CallbackData, ChatData, ConversationData, UserData
+from .models import BotData, CallbackData, ChatData, ConversationData, UserData
 from telegram.ext import BasePersistence, PersistenceInput
 from telegram.ext._utils.types import BD, CD, UD, CDCData, ConversationDict, ConversationKey
 
